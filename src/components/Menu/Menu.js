@@ -1,25 +1,25 @@
 import { useState } from 'react';
-import { PrimaryNav, Header, Title, NavMenuButton } from '@trussworks/react-uswds'
+import { PrimaryNav, Header, Title, NavMenuButton, GovBanner } from '@trussworks/react-uswds'
 import '@trussworks/react-uswds/lib/index.css'
 
 import styles from './Menu.modules.scss';
+import { NAVIGATION } from '../../lib/constants'
 
 function Menu() {
   const [expanded, setExpanded] = useState(false);
   const onClick = () => {
     setExpanded(prvExpanded => !prvExpanded);
   }
-  const menuItems = [
-    <a href="/team" key="two" className="usa-nav__link">
-      <span>Team</span>
-    </a>,
-    <a href="/contact" key="three" className="usa-nav__link">
-      <span>Contact</span>
-    </a>,
-  ];
+  const menuItems = NAVIGATION.map(({name, route}) => {
+    return (
+    <a href={route} key={name} className="usa-nav__link">
+      <span>{name}</span>
+    </a>)
+  });
 
   return (
     <>
+      <GovBanner aria-label="Official government website" />
       <Header basic={true}>
         <div className="usa-nav-container">
           <div className="usa-navbar">
