@@ -2,7 +2,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import ContactPage from './pages/Contact';
 import TeamPage from './pages/Team';
-import Menu from './components/Menu/Menu';
+import Menu from './components/Menu';
 
 function App() {
   return (

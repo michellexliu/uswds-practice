@@ -1,5 +1,5 @@
 import { GridContainer } from '@trussworks/react-uswds';
-import Form from '../components/Form/ContactForm';
+import Form from '../components/ContactForm';
 
 function TeamPage() {
   return (

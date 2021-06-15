@@ -3,7 +3,7 @@ import { PrimaryNav, Header, Title, NavMenuButton, GovBanner } from '@trussworks
 import '@trussworks/react-uswds/lib/index.css'
 
 import styles from './Menu.modules.scss';
-import { NAVIGATION } from '../../lib/constants'
+import { NAVIGATION } from '../lib/constants'
 
 function Menu() {
   const [expanded, setExpanded] = useState(false);

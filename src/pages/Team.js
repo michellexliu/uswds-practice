@@ -1,4 +1,4 @@
-import TeamGrid from '../components/TeamGrid/TeamGrid';
+import TeamGrid from '../components/TeamGrid';
 import { GridContainer } from '@trussworks/react-uswds';
 
 function TeamPage() {
