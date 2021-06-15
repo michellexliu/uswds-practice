@@ -15,7 +15,7 @@ function TeamCard({name, position, img_source}) {
         <CardMedia>
           <img
             src={img_source}
-            alt=""
+            alt={`${name}'s headshot`}
           />
         </CardMedia>
         <CardBody>

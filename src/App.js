@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Menu />
       <Switch>
+        // Might make homepage later— for now, root directs to team page.
         <Route path="/" exact>
           <Redirect to="/team" />
         </Route>
