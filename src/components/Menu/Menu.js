@@ -1,18 +1,20 @@
 import { useState } from 'react';
-import { PrimaryNav, Header, Title, } from '@trussworks/react-uswds'
+import { PrimaryNav, Header, Title, NavMenuButton } from '@trussworks/react-uswds'
 import '@trussworks/react-uswds/lib/index.css'
 
-function Header() {
+import styles from './Menu.modules.scss';
+
+function Menu() {
   const [expanded, setExpanded] = useState(false);
   const onClick = () => {
     setExpanded(prvExpanded => !prvExpanded);
   }
   const menuItems = [
-    <a href="#two" key="two" className="usa-nav__link">
-      <span>Parent link</span>
+    <a href="/team" key="two" className="usa-nav__link">
+      <span>Team</span>
     </a>,
-    <a href="#three" key="three" className="usa-nav__link">
-      <span>Parent link</span>
+    <a href="/contact" key="three" className="usa-nav__link">
+      <span>Contact</span>
     </a>,
   ];
 
@@ -21,7 +23,7 @@ function Header() {
       <Header basic={true}>
         <div className="usa-nav-container">
           <div className="usa-navbar">
-            <Title>Project Title</Title>
+            <Title>MOCTO CIC Interns</Title>
             <NavMenuButton onClick={onClick} label="Menu" />
           </div>
           <PrimaryNav
@@ -34,4 +36,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Menu;

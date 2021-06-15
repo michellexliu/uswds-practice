@@ -1,14 +1,16 @@
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import ContactPage from './pages/Contact';
 import TeamPage from './pages/Team';
+import Menu from './components/Menu/Menu';
 
 function App() {
   return (
     <div className="App">
+      <Menu />
       <Switch>
         <Route path="/" exact>
-          <TeamPage />
+          <Redirect to="/team" />
         </Route>
         <Route path="/team" exact>
           <TeamPage />

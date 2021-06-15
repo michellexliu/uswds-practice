@@ -3,3 +3,17 @@
 $theme-image-path: '~uswds/src/img';
 $theme-font-path: '~uswds/src/fonts';
 $theme-hero-image: '~uswds/src/img/hero.png';
+
+$theme-global-paragraph-styles: true;
+$theme-global-link-styles: true;
+$theme-global-content-styles: true;
+
+$theme-show-notifications: false;
+$theme-font-type-sans: 'public-sans';
+$theme-font-sans-custom-stack: $font__sans-serif;
+
+$theme-color-secondary: $mocto__red;
+
+$theme-font-role-heading: 'sans';
+
+$theme-header-max-width: 'widescreen';
