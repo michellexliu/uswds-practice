@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PrimaryNav, Header, Title, NavMenuButton, GovBanner } from '@trussworks/react-uswds'
+import { PrimaryNav, Header, Title, NavMenuButton, GovBanner, GridContainer, Grid } from '@trussworks/react-uswds'
 import '@trussworks/react-uswds/lib/index.css'
 
 import { useTranslation } from "react-i18next";
@@ -28,16 +28,16 @@ function Menu() {
     <>
       <GovBanner aria-label="Official government website" />
       <Header basic={true}>
-        <div className="usa-nav-container">
-          <div className="usa-navbar">
+        <GridContainer className="usa-nav-container">
+          <Grid row className="usa-navbar">
             <Title>{t('title')}</Title>
             <NavMenuButton onClick={onClick} label="Menu" />
-          </div>
+          </Grid>
           <PrimaryNav
             items={menuItems}
             mobileExpanded={expanded}
             onToggleMobileNav={onClick} />
-        </div>
+        </GridContainer>
       </Header>
     </>
   );

@@ -6,7 +6,7 @@ import Menu from './components/Menu';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Menu />
       <Switch>
         // Might make homepage later— for now, root directs to team page.
@@ -18,7 +18,7 @@ function App() {
           <ContactPage />
         </Route>
       </Switch>
-    </div>
+    </>
   );
 }
 
