@@ -10,7 +10,7 @@ function TeamGrid() {
     <>
       <CardGroup>
         {INTERNS.map((intern) => {
-          return <TeamCard name={intern.name} position={intern.position} img_source={intern.img_source} />
+          return <TeamCard name={intern.name} position={intern.position} />
         })}
       </CardGroup>
     </>

@@ -5,7 +5,7 @@ import '@trussworks/react-uswds/lib/index.css'
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
 
-function TeamCard({name, position, img_source}) {
+function TeamCard({name, position}) {
   const { t } = useTranslation();
 
   return (
@@ -18,7 +18,7 @@ function TeamCard({name, position, img_source}) {
         </CardHeader>
         <CardMedia>
           <img
-            src={img_source}
+            src={`/assets/${name}.jpg`}
             alt={t("headshot", { name: name })}
           />
         </CardMedia>
