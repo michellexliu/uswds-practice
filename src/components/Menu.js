@@ -12,9 +12,10 @@ function Menu() {
   }
   const menuItems = NAVIGATION.map(({name, route}) => {
     return (
-    <a href={route} key={name} className="usa-nav__link">
-      <span>{name}</span>
-    </a>)
+      <a href={route} key={name} className="usa-nav__link">
+        <span>{name}</span>
+      </a>
+    )
   });
 
   return (

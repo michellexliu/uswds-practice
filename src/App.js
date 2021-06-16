@@ -10,9 +10,7 @@ function App() {
       <Menu />
       <Switch>
         // Might make homepage later— for now, root directs to team page.
-        <Route path="/" exact>
-          <Redirect to="/team" />
-        </Route>
+        <Redirect exact from="/" to="/team" />
         <Route path="/team" exact>
           <TeamPage />
         </Route>

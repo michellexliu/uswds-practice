@@ -1,7 +1,7 @@
 import { GridContainer } from '@trussworks/react-uswds';
 import Form from '../components/ContactForm';
 
-function TeamPage() {
+function Contact() {
   return (
     <GridContainer containerSize="widescreen">
       <br />
@@ -11,4 +11,4 @@ function TeamPage() {
   );
 }
 
-export default TeamPage;
+export default Contact;
