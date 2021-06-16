@@ -4,11 +4,11 @@
 @import '~uswds/src/stylesheets/theme/_uswds-theme-color.scss';
 @import '~uswds/src/stylesheets/theme/_uswds-theme-utilities.scss';
 
-
-@import '~uswds/src/stylesheets/packages/_required.scss';
-
 // Custom theme settings/USWDS overrides go here <-- the settings you defined above
 @import 'variables/import';
 @import 'rules/import';
+
+@import '~uswds/src/stylesheets/packages/_required.scss';
+
 
 @import 'uswds'; // <-- this goes at the end, contains USWDS CSS
