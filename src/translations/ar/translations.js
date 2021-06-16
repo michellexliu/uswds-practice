@@ -1,0 +1,17 @@
+export const TRANSLATIONS_AR = {
+  "title": "المتدربون MOCTO CIC",
+  "team": "فريقنا",
+  "contact": "اتصل بنا",
+  "swe": "مهندس برمجيات متدرب",
+  "pm": "مدير المنتج متدرب",
+  "headshot": "{{name}} طلقة رأس",
+  "full_name": "الاسم الكامل",
+  "subject": "الموضوع",
+  "email": "البريد الإلكتروني",
+  "message": "الرسالة",
+  "michelle": "Michelle Liu",
+  "kara": "Kara Siegel",
+  "saiful": "Saiful Islam",
+  "anya": "Anya Dunaif",
+  "britney": "Britney Johnson",
+};

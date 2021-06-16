@@ -7,7 +7,8 @@ import { TRANSLATIONS_FR } from "./fr/translations";
 import { TRANSLATIONS_ES } from "./es/translations";
 import { TRANSLATIONS_DE } from "./de/translations";
 import { TRANSLATIONS_ZH } from "./zh/translations";
- 
+import { TRANSLATIONS_AR } from "./ar/translations";
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -28,8 +29,11 @@ i18n
         zh: {
           translation: TRANSLATIONS_ZH
         },
+        ar: {
+          translation: TRANSLATIONS_AR
+        },
      },
-     lng: "zh",
+     lng: "en",
      interpolation: {
        escapeValue: false // react already safes from xss
      }

@@ -4,7 +4,7 @@ export const TRANSLATIONS_DE = {
   "contact": "Kontakt",
   "swe": "Softwareingenieur Praktikant",
   "pm": "Produktmanager Praktikant",
-  "headshot": "{{name}}s Headshot",
+  "headshot": "{{name}}s Kopfschuss",
   "full_name": "Vollständiger Name",
   "subject": "Betreff",
   "email": "Email",

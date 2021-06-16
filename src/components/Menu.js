@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PrimaryNav, Header, Title, NavMenuButton, GovBanner, GridContainer, Grid } from '@trussworks/react-uswds'
+import { PrimaryNav, Header, Title, NavMenuButton, GovBanner, GridContainer, Grid, Link } from '@trussworks/react-uswds'
 import '@trussworks/react-uswds/lib/index.css'
 
 import { useTranslation } from "react-i18next";
@@ -7,6 +7,7 @@ import "../translations/i18n";
 
 import styles from './Menu.modules.scss';
 import { NAVIGATION } from '../lib/constants'
+import LangSelect from './LangSelect';
 
 function Menu() {
   const [expanded, setExpanded] = useState(false);
@@ -18,9 +19,9 @@ function Menu() {
 
   const menuItems = NAVIGATION.map(({name, route}) => {
     return (
-      <a href={route} key={name} className="usa-nav__link">
+      <Link href={route} key={name} className="usa-nav__link">
         <span>{t(name)}</span>
-      </a>
+      </Link>
     )
   });
 
@@ -38,6 +39,7 @@ function Menu() {
             mobileExpanded={expanded}
             onToggleMobileNav={onClick} />
         </GridContainer>
+        <LangSelect />
       </Header>
     </>
   );
