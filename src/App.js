@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -7,10 +6,8 @@ import TeamPage from './pages/Team';
 import Menu from './components/Menu';
 
 function App() {
-  const [lng, setLng] = useState('en');
-
   return (
-    <Router basename={`/${lng}`}>
+    <Router>
       <Menu />
       <Switch>
         // Might make homepage later— for now, root directs to team page.
