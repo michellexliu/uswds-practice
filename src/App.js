@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route, Redirect } from 'react-router-dom';
+
+import ContactPage from './pages/Contact';
+import TeamPage from './pages/Team';
+import Menu from './components/Menu';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu />
+      <Switch>
+        // Might make homepage later— for now, root directs to team page.
+        <Redirect exact from="/" to="/team" />
+        <Route path="/team" exact>
+          <TeamPage />
+        </Route>
+        <Route path="/contact" exact>
+          <ContactPage />
+        </Route>
+      </Switch>
     </div>
   );
 }
