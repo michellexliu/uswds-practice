@@ -15,5 +15,6 @@ export const TRANSLATIONS_EN = {
   "full_name": "Full Name",
   "subject": "Subject",
   "email": "Email",
-  "message": "Message"
+  "message": "Message",
+  "missing": "We're sorry! The page you are looking for does not exist."
 };

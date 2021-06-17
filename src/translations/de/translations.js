@@ -16,4 +16,5 @@ export const TRANSLATIONS_DE = {
   "saiful": "Saiful Islam",
   "anya": "Anya Dunaif",
   "britney": "Britney Johnson",
+  "missing": "[DE] We're sorry! The page you are looking for does not exist."
 };

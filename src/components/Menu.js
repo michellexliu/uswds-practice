@@ -4,11 +4,11 @@ import '@trussworks/react-uswds/lib/index.css'
 
 import { useTranslation } from "react-i18next";
 
-import styles from './Menu.modules.scss';
+import styles from './Menu.scss';
 import { NAVIGATION } from '../lib/constants';
 import LangSelect from './LangSelect';
 
-function Menu() {
+function Menu({ locale }) {
   const [expanded, setExpanded] = useState(false);
   const { t } = useTranslation();
 
@@ -38,7 +38,6 @@ function Menu() {
             mobileExpanded={expanded}
             onToggleMobileNav={onClick} />
         </GridContainer>
-        <LangSelect />
       </Header>
     </>
   );

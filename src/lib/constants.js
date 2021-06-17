@@ -25,3 +25,5 @@ export const LANGS = [
   {code: 'zh', name: '中文'},
   {code: 'de', name: 'Deutsche'},
 ];
+
+export const LOCALES = LANGS.map(({code}) => code);

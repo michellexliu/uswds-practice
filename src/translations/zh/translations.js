@@ -16,4 +16,5 @@ export const TRANSLATIONS_ZH = {
   "saiful": "Saiful Islam",
   "anya": "Anya Dunaif",
   "britney": "Britney Johnson",
+  "missing": "[ZH] We're sorry! The page you are looking for does not exist."
 }

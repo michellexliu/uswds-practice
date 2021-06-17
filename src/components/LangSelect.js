@@ -1,13 +1,12 @@
 import { useEffect } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import { Button, NavList, GridContainer } from '@trussworks/react-uswds';
 import '@trussworks/react-uswds/lib/index.css';
 import { useTranslation } from "react-i18next";
 
-import { NAVIGATION } from '../lib/constants';
-import { LANGS } from '../lib/constants';
+import { NAVIGATION, LANGS } from '../lib/constants';
 
-function LangSelect() {
+function LangSelect({ changeLang }) {
   let history = useHistory();
   let location = useLocation();
 
@@ -18,15 +17,22 @@ function LangSelect() {
 
 
   const { i18n } = useTranslation();
-  
-  const changeLanguage = (lng) => {
-    console.log(location.pathname);
-    i18n.changeLanguage(lng);
-  };
+
+  const getNewUrl = (lng) => {
+    const curPath = location.pathname;
+    const pagePath = curPath.split('/')[2];
+    console.log(`/${lng}/${pagePath}`);
+    return `/${lng}/${pagePath}`;
+  }
 
   const listItems = LANGS.map((lang) => {
+    const handleClick = event => {
+      changeLang(lang.code);
+      history.push(getNewUrl(lang.code));
+      event.preventDefault();
+    }
     // TODO: Update hrefs after figuring out language routing situation— potentially might need equivalent of onclick instead
-    return <Button onClick={() => changeLanguage(lang.code)} key={lang.code}>{lang.name}</Button>
+    return <Button onClick={handleClick} key={lang.code}>{lang.name}</Button>
   })
 
   return (

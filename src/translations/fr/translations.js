@@ -15,5 +15,6 @@ export const TRANSLATIONS_FR = {
   "full_name": "Nom Complet",
   "subject": "Sujet",
   "email": "Email",
-  "message": "Message"
+  "message": "Message",
+  "missing": "[FR] We're sorry! The page you are looking for does not exist."
 };

@@ -9,6 +9,8 @@ import '@trussworks/react-uswds/lib/index.css';
 import "./translations/i18n";
 
 ReactDOM.render(
-  <App />,
+  <Router>
+    <App />
+  </Router>,
   document.getElementById('root')
 );
