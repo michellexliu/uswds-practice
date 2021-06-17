@@ -1,4 +1,5 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import ContactPage from './pages/Contact';
 import TeamPage from './pages/Team';
@@ -6,7 +7,7 @@ import Menu from './components/Menu';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Menu />
       <Switch>
         // Might make homepage later— for now, root directs to team page.
@@ -18,7 +19,7 @@ function App() {
           <ContactPage />
         </Route>
       </Switch>
-    </div>
+    </Router>
   );
 }
 

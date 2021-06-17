@@ -8,8 +8,6 @@ import reportWebVitals from './reportWebVitals';
 import '@trussworks/react-uswds/lib/index.css';
 
 ReactDOM.render(
-  <Router>
-      <App />
-  </Router>,
+  <App />,
   document.getElementById('root')
 );

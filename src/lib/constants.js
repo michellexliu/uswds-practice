@@ -1,18 +1,27 @@
 export const NAVIGATION = [
   {
-    name: 'Our Team',
+    name: 'team',
     route: '/team'
   },
   {
-    name: 'Contact Us',
+    name: 'contact',
     route: '/contact'
   },
 ];
 
 export const INTERNS = [
-  {name: "Michelle Liu", position: "Software Engineering Intern", img_source: "https://images.unsplash.com/photo-1552084117-56a987666449?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=450&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=800"},
-  {name: "Kara Siegel", position: "Software Engineering Intern", img_source: "https://images.unsplash.com/photo-1552084117-56a987666449?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=450&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=800"},
-  {name: "Saiful Islam", position: "Software Engineering Intern", img_source: "https://images.unsplash.com/photo-1552084117-56a987666449?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=450&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=800"},
-  {name: "Anya Dunaif", position: "Software Engineering Intern", img_source: "https://images.unsplash.com/photo-1552084117-56a987666449?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=450&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=800"},
-  {name: "Britney Johnson", position: "Product Management Intern", img_source: "https://images.unsplash.com/photo-1552084117-56a987666449?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=450&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=800"}
+  {name: "britney", position: "pm"},
+  {name: "anya", position: "swe"},
+  {name: "saiful", position: "swe"},
+  {name: "michelle", position: "swe"},
+  {name: "kara", position: "swe"},
+];
+
+export const LANGS = [
+  {code: 'en', name: 'English'},
+  {code: 'es', name: 'Español'},
+  {code: 'fr', name: 'Français'},
+  {code: 'ar', name: 'عربى'},
+  {code: 'zh', name: '中文'},
+  {code: 'de', name: 'Deutsche'},
 ];
