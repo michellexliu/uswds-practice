@@ -27,8 +27,7 @@ function App() {
 
   const changeLang = (lng) => {
     setLocale(lng);
-    console.log("locale", locale);
-    // i18n.changeLanguage(lng);
+    console.log("locale", lng);
   }
 
   return (
@@ -36,13 +35,14 @@ function App() {
       <Menu locale={locale} />
       <LangSelect changeLang={changeLang} />
       <Switch>
-        <Redirect from={`/:locale`} to={`/:locale${teamRoute}`} exact />
-        <Redirect from={teamRoute} to={`/:locale${teamRoute}`} exact />
-        <Redirect from={contactRoute} to={`/:locale${contactRoute}`} exact />
-        <Route path={`/:locale${teamRoute}`} exact>
+        <Redirect from='/' to={`/${locale}${teamRoute}`} exact />
+        <Redirect from={`/${locale}`} to={`/${locale}${teamRoute}`} exact />
+        <Redirect from={teamRoute} to={`/${locale}${teamRoute}`} exact />
+        <Redirect from={contactRoute} to={`/${locale}${contactRoute}`} exact />
+        <Route path={`/${locale}${teamRoute}`} exact>
           <TeamPage />
         </Route>
-        <Route path={`/:locale${contactRoute}`} exact>
+        <Route path={`/${locale}${contactRoute}`} exact>
           <ContactPage />
         </Route>
         <Route path="*" exact>
