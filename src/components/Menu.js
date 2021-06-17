@@ -16,10 +16,8 @@ import { useTranslation } from "react-i18next";
 
 import styles from './Menu.scss';
 import { NAVIGATION } from '../lib/constants';
-import LangSelect from './LangSelect';
 
 function Menu({ locale }) {
-  let location = useLocation();
   let history = useHistory()
 
   const [expanded, setExpanded] = useState(false);
@@ -30,13 +28,11 @@ function Menu({ locale }) {
   }
 
   const getNewUrl = (page) => {
-    const curPath = location.pathname;
-    const lng = curPath.split('/')[1];
-    console.log(`/${lng}/${page}`);
-    return `/${lng}/${page}`;
+    console.log(`/${locale}/${page}`);
+    return `/${locale}/${page}`;
   }
 
-  const menuItems = NAVIGATION.map(({name, route}) => {
+  const menuItems = NAVIGATION.map(({name}) => {
     const handleClick = event => {
       history.push(getNewUrl(name));
       event.preventDefault();

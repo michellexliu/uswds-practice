@@ -4,19 +4,11 @@ import { Button, NavList, GridContainer } from '@trussworks/react-uswds';
 import '@trussworks/react-uswds/lib/index.css';
 import { useTranslation } from "react-i18next";
 
-import { NAVIGATION, LANGS } from '../lib/constants';
+import { LANGS } from '../lib/constants';
 
 function LangSelect({ changeLang }) {
   let history = useHistory();
   let location = useLocation();
-
-  useEffect(() => {
-    const currentPath = location.pathname;
-    const searchParams = new URLSearchParams(location.search);
-  }, [location]);
-
-
-  const { i18n } = useTranslation();
 
   const getNewUrl = (lng) => {
     const curPath = location.pathname;

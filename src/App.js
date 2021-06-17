@@ -1,5 +1,4 @@
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
-// import { BrowserRouter as Router } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 
@@ -8,11 +7,11 @@ import TeamPage from './pages/Team';
 import MissingPage from './pages/Missing';
 import Menu from './components/Menu';
 import LangSelect from './components/LangSelect';
-import { NAVIGATION, LOCALES } from './lib/constants';
+import { NAVIGATION } from './lib/constants';
 
 function App() {
   const location = useLocation();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     const pagePath = location.pathname;
