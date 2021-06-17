@@ -23,7 +23,7 @@ function App() {
   const teamRoute = NAVIGATION[0].route;
   const contactRoute = NAVIGATION[1].route;
 
-  const [locale, setLocale] = useState('en');
+  const [locale, setLocale] = useState(i18n.language);
 
   const changeLang = (lng) => {
     setLocale(lng);
