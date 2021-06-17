@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useHistory, useLocation } from 'react-router';
+import { useHistory } from 'react-router';
 import { 
   PrimaryNav, 
   Header, 
@@ -14,14 +14,15 @@ import '@trussworks/react-uswds/lib/index.css'
 
 import { useTranslation } from "react-i18next";
 
-import styles from './Menu.scss';
+import styles from './styles.scss';
 import { NAVIGATION } from '../lib/constants';
 
-function Menu({ locale }) {
-  let history = useHistory()
-
+function Menu() {
+  let history = useHistory();
+  
   const [expanded, setExpanded] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language;
 
   const onClick = () => {
     setExpanded(prvExpanded => !prvExpanded);

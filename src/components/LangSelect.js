@@ -4,6 +4,7 @@ import { Button, NavList, GridContainer } from '@trussworks/react-uswds';
 import '@trussworks/react-uswds/lib/index.css';
 import { useTranslation } from "react-i18next";
 
+import styles from './styles.scss';
 import { LANGS } from '../lib/constants';
 
 function LangSelect({ changeLang }) {

@@ -31,8 +31,7 @@ function App() {
 
   return (
     <>
-      <Menu locale={locale} />
-      <LangSelect changeLang={changeLang} />
+      <Menu />
       <Switch>
         <Redirect from='/' to={`/${locale}${teamRoute}`} exact />
         <Redirect from={`/${locale}`} to={`/${locale}${teamRoute}`} exact />
@@ -48,6 +47,7 @@ function App() {
           <MissingPage />
         </Route>
       </Switch>
+      <LangSelect changeLang={changeLang} />
     </>
   );
 }
