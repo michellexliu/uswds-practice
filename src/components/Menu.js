@@ -47,7 +47,7 @@ function Menu({ locale }) {
 
   return (
     <>
-      <GovBanner aria-label="Official government website" />
+      <GovBanner aria-label="Official government website" language={locale == "es" ? "spanish" : "english"} />
       <Header basic={true}>
         <GridContainer className="usa-nav-container">
           <Grid row className="usa-navbar">
