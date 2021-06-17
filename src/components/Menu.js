@@ -46,10 +46,12 @@ function Menu() {
     )
   });
 
+  const directionStyle = { direction: i18n.language === "ar" ? "rtl" : "ltr" };
+
   return (
     <>
       <GovBanner aria-label="Official government website" language={locale == "es" ? "spanish" : "english"} />
-      <Header basic={true}>
+      <Header basic={true} style={directionStyle}>
         <GridContainer className="usa-nav-container">
           <Grid row className="usa-navbar">
             <Title>{t('title')}</Title>

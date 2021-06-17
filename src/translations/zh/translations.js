@@ -11,6 +11,7 @@ export const TRANSLATIONS_ZH = {
   "subject": "主题",
   "email": "电子邮件",
   "message": "留言",
+  "submit": "提交",
   "michelle": "Michelle Liu",
   "kara": "Kara Siegel",
   "saiful": "Saiful Islam",

@@ -11,6 +11,7 @@ export const TRANSLATIONS_AR = {
   "subject": "الموضوع",
   "email": "البريد الإلكتروني",
   "message": "الرسالة",
+  "submit": "إرسال",
   "michelle": "Michelle Liu",
   "kara": "Kara Siegel",
   "saiful": "Saiful Islam",

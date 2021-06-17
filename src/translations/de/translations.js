@@ -11,6 +11,7 @@ export const TRANSLATIONS_DE = {
   "subject": "Betreff",
   "email": "Email",
   "message": "Nachricht",
+  "submit": "einreichen",
   "michelle": "Michelle Liu",
   "kara": "Kara Siegel",
   "saiful": "Saiful Islam",
