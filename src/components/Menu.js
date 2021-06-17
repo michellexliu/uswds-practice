@@ -3,10 +3,9 @@ import { PrimaryNav, Header, Title, NavMenuButton, GovBanner, GridContainer, Gri
 import '@trussworks/react-uswds/lib/index.css'
 
 import { useTranslation } from "react-i18next";
-import "../translations/i18n";
 
 import styles from './Menu.modules.scss';
-import { NAVIGATION } from '../lib/constants'
+import { NAVIGATION } from '../lib/constants';
 import LangSelect from './LangSelect';
 
 function Menu() {
@@ -19,7 +18,7 @@ function Menu() {
 
   const menuItems = NAVIGATION.map(({name, route}) => {
     return (
-      <Link href={route} key={name} className="usa-nav__link">
+      <Link href={route} key={t(name)} className="usa-nav__link">
         <span>{t(name)}</span>
       </Link>
     )

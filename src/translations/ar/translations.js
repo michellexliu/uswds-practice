@@ -2,6 +2,8 @@ export const TRANSLATIONS_AR = {
   "title": "المتدربون MOCTO CIC",
   "team": "فريقنا",
   "contact": "اتصل بنا",
+  "teamRoute": "فريق",
+  "contactRoute": "اتصل",
   "swe": "مهندس برمجيات متدرب",
   "pm": "مدير المنتج متدرب",
   "headshot": "{{name}} طلقة رأس",

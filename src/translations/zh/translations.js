@@ -2,6 +2,8 @@ export const TRANSLATIONS_ZH = {
   "title": "MOCTO CIC实习生",
   "team": "我们的团队",
   "contact": "联系我们",
+  "teamRoute": "团队",
+  "contactRoute": "联系",
   "swe": "软件工程师实习生",
   "pm": "产品经理实习生",
   "headshot": "{{name}} 的头像",

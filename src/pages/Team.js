@@ -2,7 +2,6 @@ import TeamGrid from '../components/TeamGrid';
 import { GridContainer } from '@trussworks/react-uswds';
 
 import { useTranslation } from "react-i18next";
-import "../translations/i18n";
 
 function TeamPage() {
 
@@ -14,6 +13,7 @@ function TeamPage() {
       <h1>{t("team")}</h1>
       <br />
       <TeamGrid />
+      <br />
     </GridContainer>
   );
 }

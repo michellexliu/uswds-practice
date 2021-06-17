@@ -2,6 +2,8 @@ export const TRANSLATIONS_FR = {
   "title": "Stagiaires MOCTO CIC",
   "team": "Notre Équipe",
   "contact": "Contactez-Nous",
+  "teamRoute": "équipe",
+  "contactRoute": "contactez",
   "swe": "Stage Ingénieur Logiciel",
   "pm": "Stage Chef de Produit",
   "michelle": "Michelle Liu",

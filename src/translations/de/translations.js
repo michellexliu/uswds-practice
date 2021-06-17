@@ -2,6 +2,8 @@ export const TRANSLATIONS_DE = {
   "title": "MOCTO CIC Praktikanten",
   "team": "Unser Team",
   "contact": "Kontakt",
+  "teamRoute": "team",
+  "contactRoute": "kontakt",
   "swe": "Softwareingenieur Praktikant",
   "pm": "Produktmanager Praktikant",
   "headshot": "{{name}}s Kopfschuss",

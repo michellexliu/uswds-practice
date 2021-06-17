@@ -2,7 +2,6 @@ import { Form, FormGroup, Label, TextInput, Textarea } from '@trussworks/react-u
 import '@trussworks/react-uswds/lib/index.css'
 
 import { useTranslation } from "react-i18next";
-import "../translations/i18n";
 
 function ContactForm() {
   const { t } = useTranslation();

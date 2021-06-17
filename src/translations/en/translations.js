@@ -2,6 +2,8 @@ export const TRANSLATIONS_EN = {
   "title": "MOCTO CIC Interns",
   "team": "Our Team",
   "contact": "Contact Us",
+  "teamRoute": "team",
+  "contactRoute": "contact",
   "swe": "Software Engineer Intern",
   "pm": "Product Manager Intern",
   "michelle": "Michelle Liu",

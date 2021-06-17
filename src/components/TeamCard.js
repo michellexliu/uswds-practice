@@ -2,7 +2,6 @@ import { Card, CardMedia, CardBody, CardHeader } from '@trussworks/react-uswds'
 import '@trussworks/react-uswds/lib/index.css'
 
 import { useTranslation } from "react-i18next";
-import "../translations/i18n";
 
 function TeamCard({name, position}) {
   const { t } = useTranslation();
