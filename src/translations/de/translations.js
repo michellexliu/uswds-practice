@@ -7,7 +7,7 @@ export const TRANSLATIONS_DE = {
   "swe": "Softwareingenieur Praktikant",
   "pm": "Produktmanager Praktikant",
   "headshot": "{{name}}s Kopfschuss",
-  "full_name": "Vollständiger Name",
+  "full-name": "Vollständiger Name",
   "subject": "Betreff",
   "email": "Email",
   "message": "Nachricht",

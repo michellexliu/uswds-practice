@@ -7,7 +7,7 @@ export const TRANSLATIONS_ZH = {
   "swe": "软件工程师实习生",
   "pm": "产品经理实习生",
   "headshot": "{{name}} 的头像",
-  "full_name": "全名",
+  "full-name": "全名",
   "subject": "主题",
   "email": "电子邮件",
   "message": "留言",

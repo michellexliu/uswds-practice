@@ -8,14 +8,14 @@ import {
   GovBanner, 
   GridContainer, 
   Grid, 
-  Button 
+  Link 
 } from '@trussworks/react-uswds'
 import '@trussworks/react-uswds/lib/index.css'
 
 import { useTranslation } from "react-i18next";
 
-import styles from './styles.scss';
 import { NAVIGATION } from '../lib/constants';
+import styles from './styles.scss';
 
 function Menu() {
   let history = useHistory();
@@ -40,9 +40,9 @@ function Menu() {
     }
 
     return (
-      <Button onClick={handleClick} key={t(name)} className="usa-nav__link">
+      <Link onClick={handleClick} key={t(name)} className="usa-nav__link">
         <span>{t(name)}</span>
-      </Button>
+      </Link>
     )
   });
 
@@ -50,7 +50,7 @@ function Menu() {
 
   return (
     <>
-      <GovBanner aria-label="Official government website" language={locale == "es" ? "spanish" : "english"} />
+      <GovBanner aria-label="Official government website" language={locale === "es" ? "spanish" : "english"} />
       <Header basic={true} style={directionStyle}>
         <GridContainer className="usa-nav-container">
           <Grid row className="usa-navbar">

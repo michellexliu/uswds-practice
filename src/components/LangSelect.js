@@ -1,8 +1,6 @@
-import { useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-import { Button, NavList, GridContainer } from '@trussworks/react-uswds';
+import { Link, NavList, GridContainer } from '@trussworks/react-uswds';
 import '@trussworks/react-uswds/lib/index.css';
-import { useTranslation } from "react-i18next";
 
 import styles from './styles.scss';
 import { LANGS } from '../lib/constants';
@@ -25,7 +23,7 @@ function LangSelect({ changeLang }) {
       event.preventDefault();
     }
     // TODO: Update hrefs after figuring out language routing situation— potentially might need equivalent of onclick instead
-    return <Button onClick={handleClick} key={lang.code}>{lang.name}</Button>
+    return <Link onClick={handleClick} key={lang.code}>{lang.name}</Link>
   })
 
   return (

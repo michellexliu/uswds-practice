@@ -11,8 +11,8 @@ function ContactForm() {
   return (
     <Form style={{ float: i18n.language === "ar" ? "right" : "left" }}>
       <FormGroup>
-        <Label htmlFor="full_name" style={textStyle}>{t('full_name')}</Label>
-        <TextInput id="full_name" name="full_name" type="text" style={textStyle} />
+        <Label htmlFor="full-name" style={textStyle}>{t('full-name')}</Label>
+        <TextInput id="full-name" name="full-name" type="text" style={textStyle} />
         <Label htmlFor="subject" style={textStyle}>{t('subject')}</Label>
         <TextInput id="subject" name="subject" type="text" style={textStyle} />
         <Label htmlFor="email" style={textStyle}>{t('email')}</Label>

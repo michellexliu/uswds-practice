@@ -7,7 +7,7 @@ export const TRANSLATIONS_AR = {
   "swe": "مهندس برمجيات متدرب",
   "pm": "مدير المنتج متدرب",
   "headshot": "{{name}} طلقة رأس",
-  "full_name": "الاسم الكامل",
+  "full-name": "الاسم الكامل",
   "subject": "الموضوع",
   "email": "البريد الإلكتروني",
   "message": "الرسالة",
