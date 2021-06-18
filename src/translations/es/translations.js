@@ -2,6 +2,8 @@ export const TRANSLATIONS_ES = {
   "title": "Pasantías de MOCTO CIC",
   "team": "Nuestro equipo",
   "contact": "Contáctenos",
+  "teamRoute": "equipo",
+  "contactRoute": "contáctenos",
   "swe": "Pasante de ingeniero de software",
   "pm": "Pasante de gerente de producto",
   "michelle": "Michelle Liu",
@@ -12,6 +14,8 @@ export const TRANSLATIONS_ES = {
   "headshot": "Foto de cabeza de {{nombre}}",
   "full_name": "Nombre completo",
   "subject": "Asunto",
+  "submit": "Enviar",
   "email": "Correo electrónico",
-  "message": "Mensaje"
+  "message": "Mensaje",
+  "missing": "[ES] We're sorry! The page you are looking for does not exist."
 };

@@ -2,10 +2,10 @@ import { Card, CardMedia, CardBody, CardHeader } from '@trussworks/react-uswds'
 import '@trussworks/react-uswds/lib/index.css'
 
 import { useTranslation } from "react-i18next";
-import "../translations/i18n";
 
 function TeamCard({name, position}) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const textStyle = { textAlign: i18n.language === "ar" ? "right" : "left" };
 
   return (
     <>
@@ -13,7 +13,7 @@ function TeamCard({name, position}) {
         gridLayout={{ tablet: { col: 4 } }}
         containerProps={{ className: 'border-none' }}>
         <CardHeader>
-          <h3>{t(name)}</h3>
+          <h3 style={textStyle}>{t(name)}</h3>
         </CardHeader>
         <CardMedia>
           <img
@@ -22,7 +22,7 @@ function TeamCard({name, position}) {
           />
         </CardMedia>
         <CardBody>
-          <p>
+          <p style={textStyle}>
             {t(position)}
           </p>
         </CardBody>

@@ -1,0 +1,10 @@
+@import "../sass/import";
+
+@media (min-width: 64em)  {
+  .usa-nav__primary > .usa-nav__primary-item > button:hover {
+      color: $theme-color-secondary;
+  }
+  .usa-nav__primary {
+    justify-content: center;
+  }
+}
