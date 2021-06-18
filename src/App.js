@@ -7,7 +7,7 @@ import TeamPage from './pages/Team';
 import MissingPage from './pages/Missing';
 import Menu from './components/Menu';
 import LangSelect from './components/LangSelect';
-import { NAVIGATION } from './lib/constants';
+import { NAVIGATION, LOCALES } from './lib/constants';
 
 function App() {
   const location = useLocation();
@@ -16,7 +16,8 @@ function App() {
   useEffect(() => {
     const pagePath = location.pathname;
     console.log("location changed!", pagePath.split("/"));
-    i18n.changeLanguage(pagePath.split("/")[1]);
+    const newLocale = pagePath.split("/")[1];
+    i18n.changeLanguage(LOCALES.includes(newLocale) ? newLocale : i18n.language);
   }, [location]);
 
   const teamRoute = NAVIGATION[0].route;
@@ -25,7 +26,7 @@ function App() {
   const [locale, setLocale] = useState(i18n.language);
 
   const changeLang = (lng) => {
-    setLocale(lng);
+    setLocale(LOCALES.includes(lng) ? lng : i18n.language);
     console.log("locale", lng);
   }
 
