@@ -35,12 +35,13 @@ function Menu() {
 
   const menuItems = NAVIGATION.map(({name}, index) => {
     const handleClick = event => {
+      document.title = `${t(name)} | MOCTO x CIC`;
       history.push(getNewUrl(name));
       event.preventDefault();
     }
 
     return (
-      <Link onClick={handleClick} key={t(name)} className="usa-nav__link" tabindex={index + 1}>
+      <Link onClick={handleClick} key={t(name)} className="usa-nav__link">
         <span>{t(name)}</span>
       </Link>
     )

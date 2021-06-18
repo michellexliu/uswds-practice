@@ -18,6 +18,7 @@ function App() {
     console.log("location changed!", pagePath.split("/"));
     const newLocale = pagePath.split("/")[1];
     i18n.changeLanguage(LOCALES.includes(newLocale) ? newLocale : i18n.language);
+    window.document.documentElement.lang = i18n.language;
   }, [location]);
 
   const teamRoute = NAVIGATION[0].route;
@@ -33,21 +34,23 @@ function App() {
   return (
     <>
       <Menu />
-      <Switch>
-        <Redirect from='/' to={`/${locale}${teamRoute}`} exact />
-        <Redirect from={`/${locale}`} to={`/${locale}${teamRoute}`} exact />
-        <Redirect from={teamRoute} to={`/${locale}${teamRoute}`} exact />
-        <Redirect from={contactRoute} to={`/${locale}${contactRoute}`} exact />
-        <Route path={`/${locale}${teamRoute}`} exact>
-          <TeamPage />
-        </Route>
-        <Route path={`/${locale}${contactRoute}`} exact>
-          <ContactPage />
-        </Route>
-        <Route path="*" exact>
-          <MissingPage />
-        </Route>
-      </Switch>
+      <main>
+        <Switch>
+          <Redirect from='/' to={`/${locale}${teamRoute}`} exact />
+          <Redirect from={`/${locale}`} to={`/${locale}${teamRoute}`} exact />
+          <Redirect from={teamRoute} to={`/${locale}${teamRoute}`} exact />
+          <Redirect from={contactRoute} to={`/${locale}${contactRoute}`} exact />
+          <Route path={`/${locale}${teamRoute}`} exact>
+            <TeamPage />
+          </Route>
+          <Route path={`/${locale}${contactRoute}`} exact>
+            <ContactPage />
+          </Route>
+          <Route path="*" exact>
+            <MissingPage />
+          </Route>
+        </Switch>
+      </main>
       <LangSelect changeLang={changeLang} />
     </>
   );

@@ -13,7 +13,7 @@ function TeamCard({name, position}) {
         gridLayout={{ tablet: { col: 4 } }}
         containerProps={{ className: 'border-none' }}>
         <CardHeader>
-          <h3 className={i18n.language === "ar" ? "rtl rtlText" : ""}>{t(name)}</h3>
+          <h2 className={i18n.language === "ar" ? "rtl rtlText" : ""}>{t(name)}</h2>
         </CardHeader>
         <CardMedia>
           <img

@@ -23,7 +23,7 @@ function LangSelect({ changeLang }) {
       event.preventDefault();
     }
     // TODO: Update hrefs after figuring out language routing situation— potentially might need equivalent of onclick instead
-    return (<Link onClick={handleClick} key={lang.code} tabindex={index + 3}>
+    return (<Link onClick={handleClick} key={lang.code}>
               {lang.name}
            </Link>)
   })
