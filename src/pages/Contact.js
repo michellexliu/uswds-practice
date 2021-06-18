@@ -9,8 +9,9 @@ function Contact() {
   return (
     <GridContainer containerSize="widescreen">
       <br />
-      <h1 style={{ textAlign: i18n.language === "ar" ? "right" : "left" }}>{t('contact')}</h1>
+      <h1 className={i18n.language === "ar" ? "rtl rtlText" : ""}>{t('contact')}</h1>
       <Form />
+      <br />
     </GridContainer>
   );
 }

@@ -13,12 +13,20 @@
     width: 20rem;
   }
 }
-
 .rtl {
   direction: rtl;
 }
 
-.rtl.rtlText {
+.rtlText {
   float: right;
   text-align: right;
+}
+@media (max-width: 63.99em) {  
+  .usa-nav__primary {
+    margin-top: 1.5rem;
+    clear: both;
+  }
+  .rtlText {
+    float: none;
+  }
 }
