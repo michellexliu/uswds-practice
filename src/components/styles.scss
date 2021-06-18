@@ -9,3 +9,12 @@
     justify-content: center;
   }
 }
+
+.rtl {
+  direction: rtl;
+}
+
+.rtl.rtlText {
+  float: right;
+  text-align: right;
+}
