@@ -46,13 +46,18 @@ function Menu() {
     )
   });
 
+  const returnHome = event => {
+    history.push(getNewUrl('team'));
+    event.preventDefault();
+  }
+
   return (
     <>
       <GovBanner aria-label="Official government website" language={locale === "es" ? "spanish" : "english"} />
       <Header basic={true} className={i18n.language === "ar" ? "rtl" : ""}>
         <GridContainer className="usa-nav-container">
           <Grid row className="usa-navbar">
-            <Title>{t('title')}</Title>
+            <Title onClick={returnHome}>{t('title')}</Title>
             <NavMenuButton onClick={onClick} label="Menu" />
           </Grid>
           <PrimaryNav
