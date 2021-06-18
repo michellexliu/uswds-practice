@@ -11,8 +11,8 @@ function TeamGrid() {
   return (
     <>
       <CardGroup style={{ justifyContent: i18n.language === "ar" ? "flex-end" : "flex-start" }}>
-        {INTERNS.map((intern) => {
-          return <TeamCard name={intern.name} position={intern.position} key={intern.name} />
+        {INTERNS.map((intern, index) => {
+          return <TeamCard name={intern.name} position={intern.position} key={intern.name}/>
         })}
       </CardGroup>
     </>

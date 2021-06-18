@@ -16,14 +16,16 @@ function LangSelect({ changeLang }) {
     return `/${lng}/${pagePath}`;
   }
 
-  const listItems = LANGS.map((lang) => {
+  const listItems = LANGS.map((lang, index) => {
     const handleClick = event => {
       changeLang(lang.code);
       history.push(getNewUrl(lang.code));
       event.preventDefault();
     }
     // TODO: Update hrefs after figuring out language routing situation— potentially might need equivalent of onclick instead
-    return <Link onClick={handleClick} key={lang.code}>{lang.name}</Link>
+    return (<Link onClick={handleClick} key={lang.code} tabindex={index + 3}>
+              {lang.name}
+           </Link>)
   })
 
   return (
