@@ -21,4 +21,5 @@ export const TRANSLATIONS_EN = {
   "language": "Language",
   "top": "Return to Top",
   "gov": "Official government website",
+  "nameError": "The name field should not be blank."
 };
