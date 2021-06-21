@@ -6,7 +6,7 @@ import ContactPage from './pages/Contact';
 import TeamPage from './pages/Team';
 import MissingPage from './pages/Missing';
 import Menu from './components/Menu';
-import LangSelect from './components/LangSelect';
+import NavFooter from './components/Footer';
 import { NAVIGATION, LOCALES } from './lib/constants';
 
 function App() {
@@ -17,8 +17,7 @@ function App() {
     const pagePath = location.pathname;
     const newLocale = pagePath.split("/")[1];
     const curPage = pagePath.split("/")[2];
-    i18n.changeLanguage(LOCALES.includes(newLocale) ? newLocale : i18n.language);
-    setLocale(LOCALES.includes(newLocale) ? newLocale : i18n.language);
+    changeLang(LOCALES.includes(newLocale) ? newLocale : i18n.language);
     document.title = `${curPage === "team" || curPage === "contact"
                         ? t(curPage) + " | " : ""} MOCTO x CIC`;
     window.document.documentElement.lang = i18n.language;
@@ -29,9 +28,9 @@ function App() {
 
   const [locale, setLocale] = useState(i18n.language);
 
-  const changeLang = (lng) => {
-    setLocale(LOCALES.includes(lng) ? lng : i18n.language);
-    console.log("locale", lng);
+  const changeLang = (newLocale) => {
+    i18n.changeLanguage(newLocale);
+    setLocale(newLocale);
   }
 
   return (
@@ -43,18 +42,12 @@ function App() {
           <Redirect from={`/${locale}`} to={`/${locale}/${teamRoute}`} exact />
           <Redirect from={`/${teamRoute}`} to={`/${locale}/${teamRoute}`} exact />
           <Redirect from={`/${contactRoute}`} to={`/${locale}/${contactRoute}`} exact />
-          <Route path={`/${locale}/${teamRoute}`} exact>
-            <TeamPage />
-          </Route>
-          <Route path={`/${locale}/${contactRoute}`} exact>
-            <ContactPage />
-          </Route>
-          <Route path="*" exact>
-            <MissingPage />
-          </Route>
+          <Route path={`/${locale}/${teamRoute}`} component={TeamPage} exact />
+          <Route path={`/${locale}/${contactRoute}`} component={ContactPage} exact />
+          <Route path="*" component={MissingPage} exact />
         </Switch>
       </main>
-      <LangSelect changeLang={changeLang} />
+      <NavFooter />
     </>
   );
 }

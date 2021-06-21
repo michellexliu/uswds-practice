@@ -33,3 +33,11 @@
     float: none;
   }
 }
+@media (min-width: 64em) {  
+  #testDropDownOne button {
+    color: white;
+  }
+}
+.usa-footer {
+  clear: both;
+}

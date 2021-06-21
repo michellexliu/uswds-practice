@@ -17,5 +17,6 @@ export const TRANSLATIONS_ES = {
   "submit": "Enviar",
   "email": "Correo electrónico",
   "message": "Mensaje",
+  "language": "Idioma",
   "missing": "[ES] We're sorry! The page you are looking for does not exist."
 };

@@ -1,11 +1,16 @@
 import { useLocation, useHistory } from 'react-router-dom';
-import { Button, NavList, GridContainer } from '@trussworks/react-uswds';
+import { useState } from 'react';
+import { Button, NavDropDownButton, Menu } from '@trussworks/react-uswds';
 import '@trussworks/react-uswds/lib/index.css';
+import { useTranslation } from "react-i18next";
 
 import styles from './styles.scss';
 import { LANGS } from '../lib/constants';
 
-function LangSelect({ changeLang }) {
+function LangSelect() {
+  const [isOpen, setIsOpen] = useState([false, false]);
+  const { t } = useTranslation();
+
   let history = useHistory();
   let location = useLocation();
 
@@ -18,20 +23,37 @@ function LangSelect({ changeLang }) {
 
   const listItems = LANGS.map((lang) => {
     const handleClick = event => {
-      changeLang(lang.code);
       history.push(getNewUrl(lang.code));
       event.preventDefault();
     }
     // TODO: Update hrefs after figuring out language routing situation— potentially might need equivalent of onclick instead
-    return (<Button onClick={handleClick} key={lang.code} tabindex="0">
+    return (<Button onClick={handleClick} key={lang.code} tabIndex="0">
               {lang.name}
            </Button>)
   })
 
   return (
-    <GridContainer containerSize="widescreen">
-      <NavList items={listItems} type="primary"/>
-    </GridContainer>
+    <>
+      <NavDropDownButton
+        menuId="testDropDownOne"
+        onToggle={() => {
+          setIsOpen((arr) => {
+              console.log(arr);
+              return [!arr[0], !arr[1]];
+            }
+          );
+        }}
+        isOpen={isOpen[0]}
+        label={t('language')}
+        isCurrent={true}
+      />
+      <Menu
+        key="one"
+        items={listItems}
+        isOpen={isOpen[0]}
+        id="testDropDownOne"
+      />
+    </>
   );
 }
 
