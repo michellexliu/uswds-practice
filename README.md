@@ -8,14 +8,14 @@ This is a website built to explore the [U.S. Web Design System (USWDS)](https://
 * Practicing proper web development practices by giving and receiving feedback between peers.
 ## Getting Started
 ### Install
-To clone this project, run:
-`git clone https://github.com/michellexliu/uswds-practice.git && cd uswds-practice`
+To clone this project, run:\
+```git clone https://github.com/michellexliu/uswds-practice.git && cd uswds-practice```
 
-Install any necessary dependencies with npm:
-`npm install`
+Install any necessary dependencies with npm:\
+```npm install```
 
 Run the project:
-`npm start`
+```npm start```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
