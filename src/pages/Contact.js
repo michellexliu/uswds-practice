@@ -7,7 +7,7 @@ function Contact() {
   const { t, i18n } = useTranslation();
 
   return (
-    <GridContainer containerSize="widescreen">
+    <GridContainer containerSize="widescreen" id="main-content">
       <br />
       <h1 className={i18n.language === "ar" ? "rtl rtlText" : ""}>{t('contact')}</h1>
       <Form />

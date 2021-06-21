@@ -8,7 +8,7 @@ function TeamPage() {
   const { t, i18n } = useTranslation();
   
   return (
-    <GridContainer containerSize="widescreen">
+    <GridContainer containerSize="widescreen" id="main-content">
       <br />
       <h1 style={{ textAlign: i18n.language === "ar" ? "right" : "left" }}>{t("team")}</h1>
       <br />

@@ -8,7 +8,8 @@ import {
   GovBanner, 
   GridContainer, 
   Grid, 
-  Button
+  Button,
+  Link
 } from '@trussworks/react-uswds'
 import '@trussworks/react-uswds/lib/index.css'
 
@@ -53,6 +54,7 @@ function Menu() {
 
   return (
     <>
+      <Link class="usa-skipnav" href="#main-content">Skip to main content</Link>
       <GovBanner aria-label="Official government website" language={locale === "es" ? "spanish" : "english"} />
       <Header basic={true} className={i18n.language === "ar" ? "rtl" : ""}>
         <GridContainer className="usa-nav-container">
