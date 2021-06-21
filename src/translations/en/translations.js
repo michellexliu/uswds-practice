@@ -12,7 +12,7 @@ export const TRANSLATIONS_EN = {
   "anya": "Anya Dunaif",
   "britney": "Britney Johnson",
   "headshot": "{{name}}'s headshot",
-  "full-name": "Full Name",
+  "name": "Full Name",
   "subject": "Subject",
   "email": "Email",
   "message": "Message",
