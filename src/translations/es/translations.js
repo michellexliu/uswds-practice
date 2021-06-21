@@ -18,5 +18,7 @@ export const TRANSLATIONS_ES = {
   "email": "Correo electrónico",
   "message": "Mensaje",
   "language": "Idioma",
-  "missing": "[ES] We're sorry! The page you are looking for does not exist."
+  "missing": "[ES] We're sorry! The page you are looking for does not exist.",
+  "top": "[ES] Return to Top",
+  "gov": "[ES] Official government website",
 };

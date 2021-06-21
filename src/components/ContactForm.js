@@ -18,7 +18,7 @@ function ContactForm() {
         <TextInput id="email" name="email" type="email"  className={i18n.language === "ar" ? "rtl rtlText" : ""} autoComplete="email"/>
         <Label htmlFor="message" className={i18n.language === "ar" ? "rtl rtlText" : ""}>{t('message')}</Label>
         <Textarea id="message" name="message" className={i18n.language === "ar" ? "rtl rtlText" : ""} autoComplete="message" />
-        <Button type="submit" aria-label="Submit">{t("submit")}</Button>
+        <Button type="submit" aria-label={t("submit")}>{t("submit")}</Button>
       </FormGroup>
     </Form>
   );

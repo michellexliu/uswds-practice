@@ -18,5 +18,7 @@ export const TRANSLATIONS_FR = {
   "message": "Message",
   "submit": "Envoyer",
   "language": "Langue",
-  "missing": "[FR] We're sorry! The page you are looking for does not exist."
+  "missing": "[FR] We're sorry! The page you are looking for does not exist.",
+  "top": "[FR] Return to Top",
+  "gov": "[FR] Official government website",
 };

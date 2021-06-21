@@ -18,5 +18,7 @@ export const TRANSLATIONS_EN = {
   "message": "Message",
   "submit": "Submit",
   "missing": "We're sorry! The page you are looking for does not exist.",
-  "language": "Language"
+  "language": "Language",
+  "top": "Return to Top",
+  "gov": "Official government website",
 };

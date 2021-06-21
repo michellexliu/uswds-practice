@@ -18,5 +18,7 @@ export const TRANSLATIONS_DE = {
   "anya": "Anya Dunaif",
   "britney": "Britney Johnson",
   "language": "Sprache",
-  "missing": "[DE] We're sorry! The page you are looking for does not exist."
+  "missing": "[DE] We're sorry! The page you are looking for does not exist.",
+  "top": "[DE] Return to Top",
+  "gov": "[DE] Official government website",
 };

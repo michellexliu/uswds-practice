@@ -18,5 +18,7 @@ export const TRANSLATIONS_ZH = {
   "anya": "Anya Dunaif",
   "britney": "Britney Johnson",
   "language": "语",
-  "missing": "[ZH] We're sorry! The page you are looking for does not exist."
+  "missing": "[ZH] We're sorry! The page you are looking for does not exist.",
+  "top": "[ZH] Return to Top",
+  "gov": "[ZH] Official government website",
 }

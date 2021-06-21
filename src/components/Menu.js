@@ -56,7 +56,7 @@ function Menu() {
   return (
     <>
       <Link className="usa-skipnav" href="#main-content">Skip to main content</Link>
-      <GovBanner aria-label="Official government website" language={locale === "es" ? "spanish" : "english"} id="top" />
+      <GovBanner aria-label={t('gov')} language={locale === "es" ? "spanish" : "english"} id="top" />
       <Header basic={true} className={i18n.language === "ar" ? "rtl" : ""}>
         <GridContainer className="usa-nav-container">
           <Grid row className="usa-navbar">

@@ -49,7 +49,7 @@ function NavFooter() {
     )
   });
 
-  const returnToTop = <GridContainer containerSize="widescreen" className="usa-footer__return-to-top"><Link href="#top">Return to Top</Link></GridContainer>;
+  const returnToTop = <GridContainer containerSize="widescreen" className="usa-footer__return-to-top"><Link href="#top">{t('top')}</Link></GridContainer>;
 
   return (
     <Footer

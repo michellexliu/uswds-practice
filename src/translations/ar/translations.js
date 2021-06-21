@@ -18,5 +18,7 @@ export const TRANSLATIONS_AR = {
   "anya": "Anya Dunaif",
   "britney": "Britney Johnson",
   "language": "لغة",
-  "missing": "[AR] We're sorry! The page you are looking for does not exist."
+  "missing": "[AR] We're sorry! The page you are looking for does not exist.",
+  "top": "[AR] Return to Top",
+  "gov": "[AR] Official government website",
 };
