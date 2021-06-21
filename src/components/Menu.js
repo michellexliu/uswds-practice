@@ -8,7 +8,7 @@ import {
   GovBanner, 
   GridContainer, 
   Grid, 
-  Link 
+  Button
 } from '@trussworks/react-uswds'
 import '@trussworks/react-uswds/lib/index.css'
 
@@ -33,16 +33,16 @@ function Menu() {
     return `/${locale}/${page}`;
   }
 
-  const menuItems = NAVIGATION.map(({name}, index) => {
+  const menuItems = NAVIGATION.map(({name}) => {
     const handleClick = event => {
       history.push(getNewUrl(name));
       event.preventDefault();
     }
 
     return (
-      <Link onClick={handleClick} key={t(name)} className="usa-nav__link">
+      <Button onClick={handleClick} key={t(name)} className="usa-nav__link" tabindex="0">
         <span>{t(name)}</span>
-      </Link>
+      </Button>
     )
   });
 

@@ -1,5 +1,5 @@
 import { useLocation, useHistory } from 'react-router-dom';
-import { Link, NavList, GridContainer } from '@trussworks/react-uswds';
+import { Button, NavList, GridContainer } from '@trussworks/react-uswds';
 import '@trussworks/react-uswds/lib/index.css';
 
 import styles from './styles.scss';
@@ -16,16 +16,16 @@ function LangSelect({ changeLang }) {
     return `/${lng}/${pagePath}`;
   }
 
-  const listItems = LANGS.map((lang, index) => {
+  const listItems = LANGS.map((lang) => {
     const handleClick = event => {
       changeLang(lang.code);
       history.push(getNewUrl(lang.code));
       event.preventDefault();
     }
     // TODO: Update hrefs after figuring out language routing situation— potentially might need equivalent of onclick instead
-    return (<Link onClick={handleClick} key={lang.code}>
+    return (<Button onClick={handleClick} key={lang.code} tabindex="0">
               {lang.name}
-           </Link>)
+           </Button>)
   })
 
   return (
