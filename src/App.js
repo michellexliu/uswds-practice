@@ -18,6 +18,7 @@ function App() {
     const newLocale = pagePath.split("/")[1];
     const curPage = pagePath.split("/")[2];
     i18n.changeLanguage(LOCALES.includes(newLocale) ? newLocale : i18n.language);
+    setLocale(LOCALES.includes(newLocale) ? newLocale : i18n.language);
     document.title = `${curPage === "team" || curPage === "contact"
                         ? t(curPage) + " | " : ""} MOCTO x CIC`;
     window.document.documentElement.lang = i18n.language;
