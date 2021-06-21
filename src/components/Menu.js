@@ -35,7 +35,6 @@ function Menu() {
 
   const menuItems = NAVIGATION.map(({name}, index) => {
     const handleClick = event => {
-      document.title = `${t(name)} | MOCTO x CIC`;
       history.push(getNewUrl(name));
       event.preventDefault();
     }

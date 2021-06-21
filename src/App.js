@@ -11,18 +11,20 @@ import { NAVIGATION, LOCALES } from './lib/constants';
 
 function App() {
   const location = useLocation();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const pagePath = location.pathname;
-    console.log("location changed!", pagePath.split("/"));
     const newLocale = pagePath.split("/")[1];
+    const curPage = pagePath.split("/")[2];
     i18n.changeLanguage(LOCALES.includes(newLocale) ? newLocale : i18n.language);
+    document.title = `${curPage === "team" || curPage === "contact"
+                        ? t(curPage) + " | " : ""} MOCTO x CIC`;
     window.document.documentElement.lang = i18n.language;
   }, [location]);
 
-  const teamRoute = NAVIGATION[0].route;
-  const contactRoute = NAVIGATION[1].route;
+  const teamRoute = NAVIGATION[0].name;
+  const contactRoute = NAVIGATION[1].name;
 
   const [locale, setLocale] = useState(i18n.language);
 
@@ -36,14 +38,14 @@ function App() {
       <Menu />
       <main>
         <Switch>
-          <Redirect from='/' to={`/${locale}${teamRoute}`} exact />
-          <Redirect from={`/${locale}`} to={`/${locale}${teamRoute}`} exact />
-          <Redirect from={teamRoute} to={`/${locale}${teamRoute}`} exact />
-          <Redirect from={contactRoute} to={`/${locale}${contactRoute}`} exact />
-          <Route path={`/${locale}${teamRoute}`} exact>
+          <Redirect from='/' to={`/${locale}/${teamRoute}`} exact />
+          <Redirect from={`/${locale}`} to={`/${locale}/${teamRoute}`} exact />
+          <Redirect from={`/${teamRoute}`} to={`/${locale}/${teamRoute}`} exact />
+          <Redirect from={`/${contactRoute}`} to={`/${locale}/${contactRoute}`} exact />
+          <Route path={`/${locale}/${teamRoute}`} exact>
             <TeamPage />
           </Route>
-          <Route path={`/${locale}${contactRoute}`} exact>
+          <Route path={`/${locale}/${contactRoute}`} exact>
             <ContactPage />
           </Route>
           <Route path="*" exact>
