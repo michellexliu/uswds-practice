@@ -44,7 +44,7 @@ function LangSelect() {
         }}
         isOpen={isOpen[0]}
         label={t("language")}
-        isCurrent={true}
+        isCurrent={false}
       />
       <Menu
         key='one'

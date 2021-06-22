@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import {
   PrimaryNav,
   Header,
@@ -21,6 +21,7 @@ import styles from "./styles.scss";
 
 function Menu() {
   const history = useHistory();
+  const location = useLocation();
 
   const [expanded, setExpanded] = useState(false);
   const { t, i18n } = useTranslation();
@@ -40,11 +41,15 @@ function Menu() {
       event.preventDefault();
     };
 
+    console.log(location.pathname.split("/")[2], name);
+
     return (
       <Button
         onClick={handleClick}
         key={t(name)}
-        className='usa-nav__link'
+        className={`usa-nav__link ${
+          location.pathname.split("/")[2] === name ? "usa-current" : ""
+        }`}
         tabIndex='0'
       >
         <span>{t(name)}</span>

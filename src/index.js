@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import './index.scss';
-import App from './App';
-import '@trussworks/react-uswds/lib/index.css';
+import "./index.scss";
+import App from "./App";
+// import "@trussworks/react-uswds/lib/index.css";
 import "./translations/i18n";
 
 ReactDOM.render(
   <Router>
     <App />
   </Router>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

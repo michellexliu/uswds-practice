@@ -1,9 +1,9 @@
 @import "../sass/import";
 
-@media (min-width: 64em)  {
+@media (min-width: 64em) {
   .usa-nav__primary > .usa-nav__primary-item > button:hover {
-      color: $theme-color-secondary;
-      cursor: pointer;
+    color: $theme-color-secondary;
+    cursor: pointer;
   }
   .usa-nav__primary {
     justify-content: center;
@@ -11,6 +11,15 @@
 
   .usa-form {
     width: 20rem;
+  }
+  // .usa-header--basic .usa-nav__primary-item > .usa-current::after {
+  //   background-color: transparent;
+  // }
+  .usa-header--basic .usa-nav__primary-item > .usa-current:hover::after {
+    background-color: #005ea2;
+  }
+  .usa-header--basic .usa-nav__primary-item > .active-link::after {
+    background-color: #005ea2 !important;
   }
 }
 .rtl {
@@ -22,18 +31,18 @@
   text-align: right;
   clear: both;
 }
-@media (max-width: 63.99em) {  
+@media (max-width: 63.99em) {
   .usa-nav__primary {
     margin-top: 1.5rem;
     clear: both;
   }
 }
-@media (max-width: 29.99em) {  
+@media (max-width: 29.99em) {
   .rtlText {
     float: none;
   }
 }
-@media (min-width: 64em) {  
+@media (min-width: 64em) {
   #testDropDownOne button {
     color: white;
   }
