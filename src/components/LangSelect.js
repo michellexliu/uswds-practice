@@ -1,37 +1,58 @@
-import { useEffect } from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
-import { Button, NavList, GridContainer } from '@trussworks/react-uswds';
-import '@trussworks/react-uswds/lib/index.css';
+import { useLocation, useHistory } from "react-router-dom";
+import { useState } from "react";
+import { Button, NavDropDownButton, Menu } from "@trussworks/react-uswds";
+import "@trussworks/react-uswds/lib/index.css";
 import { useTranslation } from "react-i18next";
 
-import styles from './styles.scss';
-import { LANGS } from '../lib/constants';
+import styles from "./styles.scss";
+import { LANGS } from "../lib/constants";
 
-function LangSelect({ changeLang }) {
-  let history = useHistory();
-  let location = useLocation();
+function LangSelect() {
+  const [isOpen, setIsOpen] = useState([false, false]);
+  const { t } = useTranslation();
+
+  const history = useHistory();
+  const location = useLocation();
 
   const getNewUrl = (lng) => {
     const curPath = location.pathname;
-    const pagePath = curPath.split('/')[2];
-    console.log(`/${lng}/${pagePath}`);
+    const pagePath = curPath.split("/")[2];
     return `/${lng}/${pagePath}`;
-  }
+  };
 
   const listItems = LANGS.map((lang) => {
-    const handleClick = event => {
-      changeLang(lang.code);
+    const handleClick = (event) => {
       history.push(getNewUrl(lang.code));
       event.preventDefault();
-    }
+    };
     // TODO: Update hrefs after figuring out language routing situation— potentially might need equivalent of onclick instead
-    return <Button onClick={handleClick} key={lang.code}>{lang.name}</Button>
-  })
+    return (
+      <Button onClick={handleClick} key={lang.code} tabIndex='0'>
+        {lang.name}
+      </Button>
+    );
+  });
 
   return (
-    <GridContainer containerSize="widescreen">
-      <NavList items={listItems} type="primary"/>
-    </GridContainer>
+    <>
+      <NavDropDownButton
+        menuId='testDropDownOne'
+        onToggle={() => {
+          setIsOpen((arr) => {
+            return [!arr[0], !arr[1]];
+          });
+        }}
+        isOpen={isOpen[0]}
+        label={t("language")}
+        isCurrent={true}
+      />
+      <Menu
+        key='one'
+        items={listItems}
+        isOpen={isOpen[0]}
+        id='testDropDownOne'
+      />
+    </>
   );
 }
 

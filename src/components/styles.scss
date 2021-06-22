@@ -3,8 +3,44 @@
 @media (min-width: 64em)  {
   .usa-nav__primary > .usa-nav__primary-item > button:hover {
       color: $theme-color-secondary;
+      cursor: pointer;
   }
   .usa-nav__primary {
     justify-content: center;
   }
+
+  .usa-form {
+    width: 20rem;
+  }
+}
+.rtl {
+  direction: rtl;
+}
+
+.rtlText {
+  float: right;
+  text-align: right;
+  clear: both;
+}
+@media (max-width: 63.99em) {  
+  .usa-nav__primary {
+    margin-top: 1.5rem;
+    clear: both;
+  }
+}
+@media (max-width: 29.99em) {  
+  .rtlText {
+    float: none;
+  }
+}
+@media (min-width: 64em) {  
+  #testDropDownOne button {
+    color: white;
+  }
+}
+.usa-footer {
+  clear: both;
+}
+.usa-footer__secondary-section > .grid-container {
+  max-width: 1400px;
 }
