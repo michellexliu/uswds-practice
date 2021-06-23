@@ -42,13 +42,13 @@ function ContactForm() {
       if (property === "email" && !validator.isEmail(submission[property])) {
         newErrors.push(
           <ErrorMessage id='input-error-message'>
-            <Link href={`#${property}`}>{t(`${property}Error`)}</Link>
+            <Link href={`#${property}`}>{t(`contactErrors.${property}`)}</Link>
           </ErrorMessage>
         );
       } else if (submission[property] === "") {
         newErrors.push(
           <ErrorMessage id='input-error-message'>
-            <Link href={`#${property}`}>{t(`${property}Error`)}</Link>
+            <Link href={`#${property}`}>{t(`contactErrors.${property}`)}</Link>
           </ErrorMessage>
         );
       }
@@ -65,7 +65,7 @@ function ContactForm() {
             htmlFor='name'
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
           >
-            {t("name")}
+            {t("contactFields.name")}
           </Label>
           <TextInput
             required
@@ -80,7 +80,7 @@ function ContactForm() {
             htmlFor='subject'
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
           >
-            {t("subject")}
+            {t("contactFields.subject")}
           </Label>
           <TextInput
             required
@@ -95,7 +95,7 @@ function ContactForm() {
             htmlFor='email'
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
           >
-            {t("email")}
+            {t("contactFields.email")}
           </Label>
           <TextInput
             required
@@ -110,7 +110,7 @@ function ContactForm() {
             htmlFor='message'
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
           >
-            {t("message")}
+            {t("contactFields.message")}
           </Label>
           <Textarea
             required
@@ -121,7 +121,7 @@ function ContactForm() {
             autoComplete='message'
           />
           <Button type='submit' aria-label={t("submit")} onClick={handleSubmit}>
-            {t("submit")}
+            {t("contactFields.submit")}
           </Button>
         </FormGroup>
       </Form>

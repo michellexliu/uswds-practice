@@ -13,7 +13,7 @@ import "@trussworks/react-uswds/lib/index.css";
 import { useTranslation } from "react-i18next";
 
 import styles from "./styles.scss";
-import { LANGS, NAVIGATION } from "../lib/constants";
+import { LANGS } from "../lib/constants";
 
 function NavFooter() {
   const { t, i18n } = useTranslation();
@@ -45,23 +45,25 @@ function NavFooter() {
     return `/${locale}/${page}`;
   };
 
-  const menuItems = NAVIGATION.map(({ name }) => {
-    const handleClick = (event) => {
-      history.push(getNewUrl(name));
-      event.preventDefault();
-    };
+  const menuItems = t("routes", { returnObjects: true }).map(
+    ({ route, title }) => {
+      const handleClick = (event) => {
+        history.push(getNewUrl(route));
+        event.preventDefault();
+      };
 
-    return (
-      <Button
-        onClick={handleClick}
-        key={t(name)}
-        className='usa-nav__link'
-        tabIndex='0'
-      >
-        <span>{t(name)}</span>
-      </Button>
-    );
-  });
+      return (
+        <Button
+          onClick={handleClick}
+          key={route}
+          className='usa-nav__link'
+          tabIndex='0'
+        >
+          <span>{title}</span>
+        </Button>
+      );
+    }
+  );
 
   const returnToTop = (
     <GridContainer

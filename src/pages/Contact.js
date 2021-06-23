@@ -7,13 +7,13 @@ function Contact() {
   const { t, i18n } = useTranslation();
 
   return (
-    <GridContainer containerSize='widescreen'>
+    <GridContainer containerSize="widescreen">
       <br />
       <h1
         className={i18n.language === "ar" ? "rtl rtlText" : ""}
-        id='main-content'
+        id="main-content"
       >
-        {t("contact")}
+        {t("routes", { returnObjects: true })[1].title}
       </h1>
       <Form />
       <br />

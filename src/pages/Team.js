@@ -7,10 +7,10 @@ function TeamPage() {
   const { t, i18n } = useTranslation();
 
   return (
-    <GridContainer containerSize='widescreen'>
+    <GridContainer containerSize="widescreen">
       <br />
       <h1 style={{ textAlign: i18n.language === "ar" ? "right" : "left" }}>
-        {t("team")}
+        {t("routes", { returnObjects: true })[0].title}
       </h1>
       <br />
       <TeamGrid />
