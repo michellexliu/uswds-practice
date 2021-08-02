@@ -6,13 +6,13 @@ import {
   Textarea,
   Button,
   ErrorMessage,
-  Link
+  Link,
 } from "@trussworks/react-uswds";
 import "@trussworks/react-uswds/lib/index.css";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import validator from "validator";
-import styles from "./styles.scss";
+import "./styles.scss";
 
 function ContactForm() {
   const { t, i18n } = useTranslation();
@@ -22,7 +22,7 @@ function ContactForm() {
     name: "",
     subject: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const handleChange = ({ target }) => {
@@ -31,7 +31,7 @@ function ContactForm() {
     setSubmission((prev) => {
       return {
         ...prev,
-        [name]: value
+        [name]: value,
       };
     });
   };
@@ -41,13 +41,13 @@ function ContactForm() {
     for (const property in submission) {
       if (property === "email" && !validator.isEmail(submission[property])) {
         newErrors.push(
-          <ErrorMessage id='input-error-message'>
+          <ErrorMessage id="input-error-message">
             <Link href={`#${property}`}>{t(`${property}Error`)}</Link>
           </ErrorMessage>
         );
       } else if (submission[property] === "") {
         newErrors.push(
-          <ErrorMessage id='input-error-message'>
+          <ErrorMessage id="input-error-message">
             <Link href={`#${property}`}>{t(`${property}Error`)}</Link>
           </ErrorMessage>
         );
@@ -62,7 +62,7 @@ function ContactForm() {
       <Form className={i18n.language === "ar" ? "rtlText" : ""}>
         <FormGroup>
           <Label
-            htmlFor='name'
+            htmlFor="name"
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
           >
             {t("name")}
@@ -70,14 +70,14 @@ function ContactForm() {
           <TextInput
             required
             onChange={handleChange}
-            id='name'
-            name='name'
-            type='text'
+            id="name"
+            name="name"
+            type="text"
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
-            autoComplete='name'
+            autoComplete="name"
           />
           <Label
-            htmlFor='subject'
+            htmlFor="subject"
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
           >
             {t("subject")}
@@ -85,14 +85,14 @@ function ContactForm() {
           <TextInput
             required
             onChange={handleChange}
-            id='subject'
-            name='subject'
-            type='text'
+            id="subject"
+            name="subject"
+            type="text"
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
-            autoComplete='subject'
+            autoComplete="subject"
           />
           <Label
-            htmlFor='email'
+            htmlFor="email"
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
           >
             {t("email")}
@@ -100,14 +100,14 @@ function ContactForm() {
           <TextInput
             required
             onChange={handleChange}
-            id='email'
-            name='email'
-            type='email'
+            id="email"
+            name="email"
+            type="email"
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
-            autoComplete='email'
+            autoComplete="email"
           />
           <Label
-            htmlFor='message'
+            htmlFor="message"
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
           >
             {t("message")}
@@ -115,12 +115,12 @@ function ContactForm() {
           <Textarea
             required
             onChange={handleChange}
-            id='message'
-            name='message'
+            id="message"
+            name="message"
             className={i18n.language === "ar" ? "rtl rtlText" : ""}
-            autoComplete='message'
+            autoComplete="message"
           />
-          <Button type='submit' aria-label={t("submit")} onClick={handleSubmit}>
+          <Button type="submit" aria-label={t("submit")} onClick={handleSubmit}>
             {t("submit")}
           </Button>
         </FormGroup>

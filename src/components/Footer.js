@@ -12,7 +12,7 @@ import {
 import "@trussworks/react-uswds/lib/index.css";
 import { useTranslation } from "react-i18next";
 
-import styles from "./styles.scss";
+import "./styles.scss";
 import { LANGS, NAVIGATION } from "../lib/constants";
 
 function NavFooter() {

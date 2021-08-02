@@ -4,7 +4,7 @@ import { Button, NavDropDownButton, Menu } from "@trussworks/react-uswds";
 import "@trussworks/react-uswds/lib/index.css";
 import { useTranslation } from "react-i18next";
 
-import styles from "./styles.scss";
+import "./styles.scss";
 import { LANGS } from "../lib/constants";
 
 function LangSelect() {
@@ -27,7 +27,7 @@ function LangSelect() {
     };
     // TODO: Update hrefs after figuring out language routing situation— potentially might need equivalent of onclick instead
     return (
-      <Button onClick={handleClick} key={lang.code} tabIndex='0'>
+      <Button onClick={handleClick} key={lang.code} tabIndex="0">
         {lang.name}
       </Button>
     );
@@ -36,7 +36,7 @@ function LangSelect() {
   return (
     <>
       <NavDropDownButton
-        menuId='testDropDownOne'
+        menuId="testDropDownOne"
         onToggle={() => {
           setIsOpen((arr) => {
             return [!arr[0], !arr[1]];
@@ -47,10 +47,10 @@ function LangSelect() {
         isCurrent={true}
       />
       <Menu
-        key='one'
+        key="one"
         items={listItems}
         isOpen={isOpen[0]}
-        id='testDropDownOne'
+        id="testDropDownOne"
       />
     </>
   );

@@ -9,7 +9,7 @@ import {
   GridContainer,
   Grid,
   Button,
-  Link
+  Link,
 } from "@trussworks/react-uswds";
 import "@trussworks/react-uswds/lib/index.css";
 
@@ -17,7 +17,7 @@ import { useTranslation } from "react-i18next";
 
 import LangSelect from "./LangSelect";
 import { NAVIGATION } from "../lib/constants";
-import styles from "./styles.scss";
+import "./styles.scss";
 
 function Menu() {
   const history = useHistory();
@@ -44,8 +44,8 @@ function Menu() {
       <Button
         onClick={handleClick}
         key={t(name)}
-        className='usa-nav__link'
-        tabIndex='0'
+        className="usa-nav__link"
+        tabIndex="0"
       >
         <span>{t(name)}</span>
       </Button>
@@ -59,19 +59,19 @@ function Menu() {
 
   return (
     <>
-      <Link className='usa-skipnav' href='#main-content'>
+      <Link className="usa-skipnav" href="#main-content">
         Skip to main content
       </Link>
       <GovBanner
         aria-label={t("gov")}
         language={locale === "es" ? "spanish" : "english"}
-        id='top'
+        id="top"
       />
       <Header basic={true} className={i18n.language === "ar" ? "rtl" : ""}>
-        <GridContainer className='usa-nav-container'>
-          <Grid row className='usa-navbar'>
+        <GridContainer className="usa-nav-container">
+          <Grid row className="usa-navbar">
             <Title onClick={returnHome}>{t("title")}</Title>
-            <NavMenuButton onClick={onClick} label='Menu' />
+            <NavMenuButton onClick={onClick} label="Menu" />
           </Grid>
           <PrimaryNav
             items={[...menuItems, <LangSelect />]}
