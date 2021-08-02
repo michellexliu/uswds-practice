@@ -1,13 +1,13 @@
-import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { Switch, Route, Redirect, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import ContactPage from './pages/Contact';
-import TeamPage from './pages/Team';
-import MissingPage from './pages/Missing';
-import Menu from './components/Menu';
-import NavFooter from './components/Footer';
-import { NAVIGATION, LOCALES } from './lib/constants';
+import ContactPage from "./pages/Contact";
+import TeamPage from "./pages/Team";
+import MissingPage from "./pages/Missing";
+import Menu from "./components/Menu";
+import NavFooter from "./components/Footer";
+import { NAVIGATION, LOCALES } from "./lib/constants";
 
 function App() {
   const location = useLocation();
@@ -18,8 +18,9 @@ function App() {
     const newLocale = pagePath.split("/")[1];
     const curPage = pagePath.split("/")[2];
     changeLang(LOCALES.includes(newLocale) ? newLocale : i18n.language);
-    document.title = `${curPage === "team" || curPage === "contact"
-                        ? t(curPage) + " | " : ""} MOCTO x CIC`;
+    document.title = `${
+      curPage === "team" || curPage === "contact" ? t(curPage) + " | " : ""
+    } MOCTO x CIC`;
     window.document.documentElement.lang = i18n.language;
   }, [location]);
 
@@ -31,21 +32,37 @@ function App() {
   const changeLang = (newLocale) => {
     i18n.changeLanguage(newLocale);
     setLocale(newLocale);
-  }
+  };
 
   return (
     <>
       <Menu />
       <main>
         <Switch>
-          <Redirect from='/' to={`/${locale}/${teamRoute}`} exact />
+          <Redirect from="/" to={`/${locale}/${teamRoute}`} exact />
           <Redirect from={`/${locale}`} to={`/${locale}/${teamRoute}`} exact />
-          <Redirect from={`/${teamRoute}`} to={`/${locale}/${teamRoute}`} exact />
-          <Redirect from={`/${contactRoute}`} to={`/${locale}/${contactRoute}`} exact />
+          <Redirect
+            from={`/${teamRoute}`}
+            to={`/${locale}/${teamRoute}`}
+            exact
+          />
+          <Redirect
+            from={`/${contactRoute}`}
+            to={`/${locale}/${contactRoute}`}
+            exact
+          />
           <Route path={`/${locale}/${teamRoute}`} component={TeamPage} exact />
-          <Route path={`/${locale}/${contactRoute}`} component={ContactPage} exact />
+          <Route
+            path={`/${locale}/${contactRoute}`}
+            component={ContactPage}
+            exact
+          />
           <Route path="*" component={MissingPage} exact />
         </Switch>
+        {/* <ScriptTag
+          src="https://d2ttz3as5y3dj0.cloudfront.net/feedback-module.min.js"
+          type="text/javascript"
+        /> */}
       </main>
       <NavFooter />
     </>

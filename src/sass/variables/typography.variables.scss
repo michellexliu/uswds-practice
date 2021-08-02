@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap");
 
 $system__font-size: 1rem !default;
 $system__type-scale: 1.25 !default;
 $system__line-height: 1.6 !default;
 
-$font__sans-serif: 'Public Sans', Helvetica, Arial, sans-serif !default;
+$font__sans-serif: "Public Sans", Helvetica, Arial, sans-serif !default;
 
-
-body {
+h1 {
   text-transform: capitalize;
 }
 
-$theme-h2-font-size: 'lg';
+$theme-h2-font-size: "lg";
 
 // $theme-typeface-tokens: (
 //   example-serif-token: (
